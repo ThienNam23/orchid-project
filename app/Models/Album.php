@@ -5,16 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Orchid\Screen\AsSource;
-use Orchid\Attachment\Attachable;
-use Orchid\Attachment\Models\Attachment;
 use Orchid\Filters\Filterable;
-use Laravel\Scout\Searchable;
 use App\Orchid\Presenters\AlbumPresenter;
 use App\Models\Song;
 
 class Album extends Model
 {
-    use HasFactory, AsSource, Attachable, Filterable, Searchable;
+    use HasFactory, AsSource, Filterable;
 
     /**
      * 
