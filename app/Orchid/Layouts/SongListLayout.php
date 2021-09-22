@@ -45,7 +45,7 @@ class SongListLayout extends Table
                     $src = $song->song_url;
                     return $src;
                 }),
-            TD::make('frequency', 'Image')
+            TD::make('frequency', 'Frequency')
                 ->render(function (Song $song) {
                     return $song->frequency;
                 }),
