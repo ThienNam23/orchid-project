@@ -8,7 +8,6 @@ use Orchid\Screen\AsSource;
 use Orchid\Attachment\Attachable;
 use Orchid\Attachment\Models\Attachment;
 use Orchid\Filters\Filterable;
-use Laravel\Scout\Searchable;
 use App\Orchid\Presenters\SongPresenter;
 use App\Models\Artist;
 use App\Models\Category;
@@ -17,7 +16,7 @@ use App\Models\Album;
 
 class Song extends Model
 {
-    use HasFactory, AsSource, Attachable, Filterable, Searchable;
+    use HasFactory, AsSource, Attachable, Filterable;
 
     /**
      * 
@@ -40,7 +39,8 @@ class Song extends Model
      * 
      */
     protected $allowedFilters = [
-        'album_id'
+        'album_id',
+        'name'
     ];
 
     /**

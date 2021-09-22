@@ -50,6 +50,7 @@ class SongListLayout extends Table
                     return $song->frequency;
                 }),
             TD::make('album_id', 'Album')
+                ->filter(TD::FILTER_TEXT)
                 ->render(function (Song $song) {
                         $albumid = $song->album_id;
                         $album = Album::find($albumid);
